@@ -11,18 +11,19 @@ import { Injectable } from '@angular/core';
   styleUrls: ['./loja.component.css']
 })
 export class LojaComponent implements OnInit {
+  public produtos: Produto[] = [
+    new Produto(1, "Touca", 90.34, "../assets/images-produtos/touca.jpg",0),
+    new Produto(2, "Camisa", 230.80, "../assets/images-produtos/camisa.jpg",1),
+    new Produto(3, "Jaqueta", 320.33, "../assets/images-produtos/jaqueta.jpg",1)
+  ]
   
 
   constructor(
     public actived_route:ActivatedRoute,
     public produto_service:ProdutoService,
-    public produtos: Produto[] = [
-      new Produto(1, "Batata", 1.0, "teste"),
-      new Produto(2, "Ovo", 1.2, "teste"),
-      new Produto(3, "Pinga", 1.3, "teste")
-    ],
-    produto: Produto
+
   ){}
+
 
   ngOnInit(): void {
     
@@ -31,10 +32,11 @@ export class LojaComponent implements OnInit {
     }
     this.produto_service.salvar();
 
-
     console.log(this.produto_service.carregar());
     //this.produto_service.excluir(0);
     //this.produto_service.produtos.push();
-
+    
   }
+
+  
 }

@@ -2,15 +2,17 @@
 export class Produto {
 
     private id: number;
-    private descricao: string;
-    private valor: number;
-    private foto: string;
+    public descricao: string;
+    public valor: number;
+    public foto: string;
+    public destaque: number;
   
-    constructor(id: number, descricao: string, valor: number, foto: string) {
+    constructor(id: number, descricao: string, valor: number, foto: string, destaque: number) {
       this.id = id;
       this.descricao = descricao;
       this.valor = valor;
       this.foto = foto;
+      this.destaque = destaque;
     }
   
     getId(): number {
@@ -28,5 +30,9 @@ export class Produto {
     getFoto(): string {
         return this.foto;
     }
+
+    getDestaque(): number {
+      return this.destaque;
+  }
     
 }
