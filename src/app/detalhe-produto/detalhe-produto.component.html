@@ -1,0 +1,31 @@
+<section class="section product" aria-label="product">
+    <div class="container">
+
+      <h2 class="h2 section-title title text-center">{{ produto.descricao }}</h2>
+
+      <ul class="product-list has-scrollbar">
+
+        <li class="scrollbar-item">
+          <div class="product-card text-center">
+
+            <div class="card-banner">
+
+              <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                <img src="{{ produto.foto }}" width="448" height="470" loading="lazy" alt="Short Sleeve Shirt"
+                  class="img-cover">
+              </figure>
+            </div>
+
+            <div class="card-content">
+
+              <span class="price">{{ produto.valor }} R$</span>
+
+            </div>
+
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </section>

@@ -28,10 +28,10 @@
                     class="img-cover">
                 </figure>
 
-                <a href="#" class="btn product-btn">
+                <a href="produto/{{ produto.id }}" class="btn product-btn">
                   <ion-icon name="bag" aria-hidden="true"></ion-icon>
 
-                  <span class="span">Add To Cart</span>
+                  <span class="span">Detalhes</span>
                 </a>
 
               </div>
@@ -39,7 +39,7 @@
               <div class="card-content">
 
                 <h3 class="h4 title">
-                  <a href="#" class="card-title">{{ produto.descricao }}</a>
+                  <a href="produto/{{ produto.id }}" class="card-title">{{ produto.descricao }}</a>
                 </h3>
 
                 <span class="price">{{ produto.valor }} R$</span>

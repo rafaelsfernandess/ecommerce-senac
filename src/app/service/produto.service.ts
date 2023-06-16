@@ -6,13 +6,15 @@ import { Produto } from '../produto.model';
 })
 export class ProdutoService {
 
-  constructor() { }
+  constructor() {
+    this.carregar();
+   }
 
   public produtos:Array<Produto> = [];
 
   carregar(){
     this.produtos = JSON.parse(String(localStorage.getItem('produto')));
-    return this.produtos;
+    
   }
 
   excluir(indice:number){
@@ -29,8 +31,16 @@ export class ProdutoService {
     this.salvar();
   }
 
-  registro(indice:number){
-    this.produtos = this.carregar();
-    return this.produtos[indice];
-  }  
+  // registro(indice:number){
+  //   this.produtos = this.carregar();
+  //   return this.produtos[indice];
+  // }  
+
+  get(produto_id:number){
+    return this.produtos.find((produto:any)=>{
+      if (produto.id == produto_id){
+        return produto;
+      }
+    });
+  }
 }

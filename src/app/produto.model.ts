@@ -1,7 +1,7 @@
 
 export class Produto {
 
-    private id: number;
+    public id: number;
     public descricao: string;
     public valor: number;
     public foto: string;
