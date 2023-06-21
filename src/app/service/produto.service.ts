@@ -14,7 +14,7 @@ export class ProdutoService {
 
   carregar(){
     this.produtos = JSON.parse(String(localStorage.getItem('produto')));
-    
+    return this.produtos;
   }
 
   excluir(indice:number){
