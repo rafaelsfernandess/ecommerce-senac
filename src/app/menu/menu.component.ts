@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
   title = 'ecommerce';
+  
   //Sidebar toggle show hide function
   status = false;
   addToggle()

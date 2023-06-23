@@ -12,6 +12,7 @@ import { LojaComponent } from './loja/loja.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { BlogComponent } from './blog/blog.component';
 import { DetalheProdutoComponent } from './detalhe-produto/detalhe-produto.component';
+import { TodosProdutosComponent } from './todos-produtos/todos-produtos.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DetalheProdutoComponent } from './detalhe-produto/detalhe-produto.compo
     LojaComponent,
     RodapeComponent,
     BlogComponent,
-    DetalheProdutoComponent
+    DetalheProdutoComponent,
+    TodosProdutosComponent
   ],
   imports: [
     BrowserModule,

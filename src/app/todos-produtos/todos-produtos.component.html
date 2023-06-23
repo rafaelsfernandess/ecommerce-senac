@@ -1,0 +1,64 @@
+<main>
+    <article id="todos-produtos">
+
+      <section class="section product" aria-label="product">
+        <div class="container">
+  
+          <h2  class="h2 section-title title text-center">Todos Produtos</h2>
+  
+          <ul class="feature-list">
+          
+            <ng-container *ngFor="let produto of produtos" >
+            <li class="scrollbar-item">
+                
+                <div class="product-card text-center">
+  
+                  <div class="card-banner">
+  
+                    <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                      <img src="{{ produto.foto }}" width="448" height="470" loading="lazy" alt="Short Sleeve Shirt"
+                        class="img-cover">
+                    </figure>
+  
+                    <a href="produto/{{ produto.id }}" class="btn product-btn">
+                      <ion-icon name="bag" aria-hidden="true"></ion-icon>
+  
+                      <span class="span">Add To Cart</span>
+                    </a>
+  
+                  </div>
+  
+                  <div class="card-content">
+  
+                    <h3 class="h4 title">
+                      <a href="#" class="card-title">{{ produto.descricao }}</a>
+                    </h3>
+  
+                    <span class="price">{{ produto.valor }} R$</span>
+  
+                  </div>
+  
+                </div>
+              </li>
+            </ng-container>
+            
+  
+          </ul>
+  
+        </div>
+      </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    </article>
+  </main>

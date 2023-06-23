@@ -1,5 +1,5 @@
 import { Component , OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProdutoService } from '../service/produto.service';
 import { Produto } from '../produto.model';
 import { Injectable } from '@angular/core';
@@ -11,16 +11,12 @@ import { Injectable } from '@angular/core';
   styleUrls: ['./loja.component.css']
 })
 export class LojaComponent implements OnInit {
-  public produtos: Produto[] = [
-    new Produto(1, "Teste", 90.34, "../assets/images-produtos/touca.jpg",0),
-    new Produto(2, "Camisa", 230.80, "../assets/images-produtos/camisa.jpg",1),
-    new Produto(3, "Jaqueta", 320.33, "../assets/images-produtos/jaqueta.jpg",1)
-  ]
+  public produtos: Produto[] = [];
   
   constructor(
     public actived_route:ActivatedRoute,
     public produto_service:ProdutoService,
-
+    private router: Router
   ){}
 
 
@@ -30,5 +26,9 @@ export class LojaComponent implements OnInit {
     
   }
 
-  
+scrollToTop() {
+  this.router.navigateByUrl('/todos-produtos')
+    .then(() => window.scrollTo(0, 0));
+}
+
 }
